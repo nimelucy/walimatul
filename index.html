@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Digital | walimatul.web.id</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Platform undangan digital elegan untuk pernikahan, walimah, dan acara sakral. Buat undangan website mewah dengan mudah." />
+    <meta name="keywords" content="undangan pernikahan islami, walimatul ursy, undangan digital, walimatul.web.id, undangan online mewah" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="walimatul.web.id - Undangan Digital Elegan" />
+    <meta property="og:description" content="Platform undangan digital mewah untuk pernikahan dan walimah." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://walimatul.web.id" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            background-color: #f8f6f0;
+            color: #1e2b2a;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            background: none;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* ========== VARIABLES ========== */
+        :root {
+            --green-dark: #0f2b26;
+            --green-mid: #1a4038;
+            --gold: #c9a96e;
+            --gold-hover: #b8975a;
+            --gold-light: #e4d5b6;
+            --gold-glow: rgba(201, 169, 110, 0.3);
+            --cream: #faf8f5;
+            --cream-dark: #ede8dd;
+            --text-dark: #1e2b2a;
+            --text-soft: #4a5a57;
+            --white: #ffffff;
+            --shadow-elegant: 0 20px 50px -12px rgba(15, 43, 38, 0.15);
+            --border-gold: 1px solid rgba(201, 169, 110, 0.4);
+            --live-green: #22c55e;
+            --live-glow: rgba(34, 197, 94, 0.5);
+        }
+
+        /* ========== UTILITIES ========== */
+        .container {
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+        }
+        .section:last-of-type {
+            border-bottom: none;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .section-title .gold {
+            color: var(--gold);
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-soft);
+            font-size: 1rem;
+            max-width: 36rem;
+            margin: 0 auto 2.5rem auto;
+            line-height: 1.7;
+        }
+
+        /* ===== BUTTON PRIMARY ===== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: var(--gold);
+            color: var(--white) !important;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(201, 169, 110, 0.4);
+            border: 1px solid transparent;
+        }
+        .btn-primary:hover {
+            background: var(--gold-hover) !important;
+            color: var(--white) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.5);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: transparent;
+            color: var(--green-dark);
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: 1px solid var(--gold);
+            transition: all 0.25s ease;
+        }
+        .btn-outline:hover {
+            background: var(--cream);
+            border-color: var(--gold-light);
+        }
+        .btn-dark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            background: var(--green-dark);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.25s ease;
+        }
+        .btn-dark:hover {
+            background: var(--green-mid);
+            transform: translateY(-2px);
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: var(--border-gold);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            gap: 0.5rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            background: var(--green-dark);
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--green-dark);
+        }
+        .logo-text span {
+            color: var(--gold);
+        }
+        .logo-tag {
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--text-soft);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.05em;
+            margin-left: 0.25rem;
+        }
+
+        /* Desktop nav */
+        .nav-desktop {
+            display: none;
+            align-items: center;
+            gap: 2rem;
+        }
+        @media (min-width: 1024px) {
+            .nav-desktop {
+                display: flex;
+            }
+        }
+        .nav-desktop a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-soft);
+            transition: color 0.2s;
+        }
+        .nav-desktop a:hover {
+            color: var(--gold);
+        }
+        .nav-desktop .btn-primary {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* Tombol Buat Undangan khusus untuk mobile (tetap di navbar) */
+        .btn-nav-cta {
+            display: none;
+        }
+        @media (max-width: 1023px) {
+            .btn-nav-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+                background: var(--gold);
+                color: var(--white) !important;
+                font-weight: 600;
+                border-radius: 0.5rem;
+                transition: all 0.25s ease;
+                box-shadow: 0 4px 14px rgba(201, 169, 110, 0.4);
+                border: 1px solid transparent;
+                white-space: nowrap;
+            }
+            .btn-nav-cta:hover {
+                background: var(--gold-hover) !important;
+                color: var(--white) !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(201, 169, 110, 0.5);
+            }
+        }
+        @media (min-width: 1024px) {
+            .btn-nav-cta {
+                display: none !important;
+            }
+        }
+
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 0.5rem;
+            border: var(--border-gold);
+            color: var(--green-dark);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        @media (min-width: 1024px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Mobile menu (dropdown) */
+        .mobile-menu {
+            display: none;
+            padding: 1rem 0 1.5rem;
+            border-top: var(--border-gold);
+        }
+        .mobile-menu.open {
+            display: block;
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--text-soft);
+            font-weight: 500;
+        }
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+        .mobile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .mobile-actions .btn-primary,
+        .mobile-actions .btn-outline {
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 3rem 0 4rem;
+            background: linear-gradient(165deg, #f8f6f0 0%, #ede8dd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        @media (min-width: 1024px) {
+            .hero-grid {
+                flex-direction: row;
+                gap: 4rem;
+            }
+        }
+        .hero-content {
+            flex: 1;
+            text-align: center;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                text-align: left;
+            }
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201, 169, 110, 0.15);
+            color: var(--gold);
+            padding: 0.25rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            margin-bottom: 1rem;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+        .hero-title .gold {
+            color: var(--gold);
+        }
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-soft);
+            line-height: 1.8;
+            max-width: 32rem;
+            margin: 0 auto 2rem auto;
+        }
+        @media (min-width: 1024px) {
+            .hero-desc {
+                margin: 0 0 2rem 0;
+            }
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        @media (min-width: 1024px) {
+            .hero-actions {
+                justify-content: flex-start;
+            }
+        }
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        @media (min-width: 1024px) {
+            .hero-features {
+                justify-content: flex-start;
+            }
+        }
+        .hero-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-soft);
+        }
+        .hero-features i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        /* Hero Preview */
+        .hero-preview {
+            flex: 1;
+            max-width: 28rem;
+            width: 100%;
+        }
+        .preview-card {
+            background: var(--white);
+            border-radius: 1.5rem;
+            border: 1px solid var(--gold-light);
+            box-shadow: var(--shadow-elegant);
+            overflow: hidden;
+        }
+        .preview-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            border-bottom: var(--border-gold);
+        }
+        .preview-header .label {
+            font-weight: 600;
+            color: var(--green-dark);
+            font-size: 0.875rem;
+        }
+        .preview-header .label i {
+            color: var(--gold);
+            margin-right: 0.5rem;
+        }
+
+        /* ===== BADGE LIVE HIJAU DENGAN PULSASI ===== */
+        .preview-header .badge {
+            background: var(--live-green);
+            color: #fff;
+            padding: 0.2rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 12px var(--live-glow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            animation: pulse-live 1.8s ease-in-out infinite;
+            transition: all 0.2s;
+        }
+        .preview-header .badge::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #fff;
+            animation: blink-dot 1.2s ease-in-out infinite;
+        }
+        .preview-header .badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--live-glow);
+        }
+
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(0.97); }
+        }
+        @keyframes blink-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .preview-body {
+            padding: 1.5rem;
+            background: #fcfbf8;
+            display: flex;
+            justify-content: center;
+        }
+        .preview-body svg {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            border: 1px solid var(--gold-light);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            display: block;
+        }
+        .preview-footer {
+            padding: 1rem 1.5rem;
+            border-top: var(--border-gold);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-soft);
+        }
+        .preview-footer i {
+            color: var(--gold);
+            margin-right: 0.3rem;
+        }
+
+        /* ========== FEATURES ========== */
+        .features-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .feature-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: 1rem;
+            border: var(--border-gold);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-elegant);
+            border-color: var(--gold);
+        }
+        .feature-card .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+            background: rgba(201, 169, 110, 0.1);
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .feature-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            line-height: 1.6;
+        }
+
+        /* ========== CTA BANNER ========== */
+        .cta-banner {
+            background: var(--green-dark);
+            border-radius: 1.5rem;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+            border: 1px solid var(--gold);
+            margin-top: 2rem;
+        }
+        @media (min-width: 1024px) {
+            .cta-banner {
+                flex-direction: row;
+                text-align: left;
+                padding: 3rem 4rem;
+            }
+        }
+        .cta-banner .text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+        .cta-banner .text h3 .gold {
+            color: var(--gold);
+        }
+        .cta-banner .text p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .cta-banner .action .btn-primary {
+            background: var(--white);
+            color: var(--green-dark) !important;
+            box-shadow: none;
+        }
+        .cta-banner .action .btn-primary:hover {
+            background: var(--cream);
+            color: var(--green-dark) !important;
+        }
+
+        /* ========== PRICING ========== */
+        .pricing-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .pricing-tab {
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            border: var(--border-gold);
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-soft);
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .pricing-tab:hover {
+            background: var(--cream);
+        }
+        .pricing-tab.active {
+            background: var(--green-dark);
+            color: var(--gold);
+            border-color: var(--green-dark);
+        }
+        .pricing-panel {
+            display: none;
+        }
+        .pricing-panel.active {
+            display: block;
+        }
+        .pricing-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .pricing-card {
+            background: var(--white);
+            border-radius: 1.5rem;
+            border: var(--border-gold);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .pricing-card:hover {
+            box-shadow: var(--shadow-elegant);
+        }
+        .pricing-card.ring {
+            border-color: var(--gold);
+            border-width: 2px;
+        }
+        .pricing-card .badge-top {
+            position: absolute;
+            top: -0.75rem;
+            right: 1.5rem;
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.2rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        .pricing-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--green-dark);
+        }
+        .pricing-card .duration {
+            color: var(--text-soft);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+        .pricing-card .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+        .pricing-card .price .strike {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-soft);
+            text-decoration: line-through;
+            display: block;
+        }
+        .pricing-card ul {
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+        .pricing-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            padding: 0.2rem 0;
+        }
+        .pricing-card ul li .check {
+            color: var(--gold);
+            font-weight: 700;
+            margin-top: 0.1rem;
+        }
+        .pricing-card ul li .cross {
+            color: #ccc;
+            font-weight: 700;
+            margin-top: 0.1rem;
+        }
+        .pricing-card ul li .strikethrough {
+            color: #bbb;
+            text-decoration: line-through;
+        }
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            background: var(--cream-dark);
+            color: var(--green-dark);
+            transition: all 0.2s;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+        .pricing-card .btn:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+        .pricing-card .btn.gold {
+            background: var(--gold);
+            color: var(--white);
+        }
+        .pricing-card .btn.gold:hover {
+            background: var(--gold-hover);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--green-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 0 1.5rem;
+            border-top: 2px solid var(--gold);
+        }
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+        .footer-brand .logo-text {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+        .footer-brand .logo-text span {
+            color: var(--gold);
+        }
+        .footer-brand p {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            max-width: 24rem;
+            line-height: 1.7;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-col ul li a {
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover {
+            color: var(--gold);
+        }
+        .footer-col ul li a i {
+            color: var(--gold);
+            width: 1.5rem;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 169, 110, 0.2);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            color: var(--white);
+            transition: all 0.2s;
+            margin-left: 0.5rem;
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--green-dark);
+        }
+
+        /* ========== FLOATING WA ========== */
+        .wa-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s;
+            cursor: grab;
+            user-select: none;
+        }
+        .wa-float:hover {
+            transform: scale(1.05);
+        }
+        .wa-float svg {
+            height: 1.8rem;
+            width: 1.8rem;
+            fill: #fff;
+            pointer-events: none;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .cta-banner {
+                padding: 2rem 1rem;
+            }
+            .pricing-card {
+                padding: 1.5rem 1rem;
+            }
+            .preview-body {
+                padding: 0.75rem;
+            }
+            .logo-text {
+                font-size: 1rem;
+            }
+            .logo-tag {
+                display: none;
+            }
+            .btn-nav-cta {
+                padding: 0.4rem 0.75rem;
+                font-size: 0.75rem;
+            }
+            .preview-header .badge {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-preview {
+                max-width: 100%;
+            }
+            .preview-body svg {
+                max-height: 380px;
+            }
+            .hero-features span {
+                font-size: 0.75rem;
+                gap: 0.3rem;
+            }
+            .hero-features i {
+                font-size: 0.85rem;
+            }
+            .btn-nav-cta i {
+                display: none;
+            }
+            .btn-nav-cta {
+                padding: 0.4rem 0.6rem;
+                font-size: 0.7rem;
+            }
+            .hero {
+                padding: 2rem 0 2.5rem;
+            }
+            .hero-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .hero-actions .btn-primary,
+            .hero-actions .btn-outline {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">W</span>
+                <span class="logo-text">walimatul<span>.web.id</span></span>
+                <span class="logo-tag">| ✦ Elegan</span>
+            </a>
+
+            <nav class="nav-desktop">
+                <a href="#feature">Fitur</a>
+                <a href="#pricing">Paket</a>
+                <a href="/blog">Blog</a>
+                <a href="/login" style="color:var(--text-soft);">Masuk</a>
+                <a href="/register" class="btn-primary">Buat Undangan</a>
+            </nav>
+
+            <!-- Tombol Buat Undangan di navbar (muncul di mobile/tablet) -->
+            <a href="/register" class="btn-primary btn-nav-cta">
+                <i class="fas fa-pen-fancy"></i> Buat Undangan
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (dropdown) – tombol Buat Undangan juga ada di sini -->
+        <div class="mobile-menu container" id="mobileMenu">
+            <a href="#feature">Fitur</a>
+            <a href="#pricing">Paket</a>
+            <a href="/blog">Blog</a>
+            <div class="mobile-actions">
+                <a href="/login" class="btn-outline">Masuk</a>
+                <a href="/register" class="btn-primary">Buat Undangan</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">السلام عليكم</div>
+                <h1 class="hero-title">
+                    Undangan Digital <br /><span class="gold">Walimatul</span> Mewah
+                </h1>
+                <p class="hero-desc">
+                    Ciptakan momen sakral dengan undangan digital elegan. <br />
+                    Share tanpa batas, kelola tamu dengan mudah, dan tetap <br />
+                    terkesan dengan sentuhan emas.
+                </p>
+                <div class="hero-actions">
+                    <a href="/register" class="btn-primary">
+                        <i class="fas fa-pen-fancy"></i> Buat Sekarang
+                    </a>
+                    <a href="#pricing" class="btn-outline">Lihat Paket</a>
+                </div>
+                <div class="hero-features">
+                    <span><i class="fas fa-qrcode"></i> QR Buku Tamu</span>
+                    <span><i class="fab fa-whatsapp"></i> Auto Blast WA</span>
+                    <span><i class="fas fa-map-pin"></i> Google Maps</span>
+                </div>
+            </div>
+
+            <div class="hero-preview">
+                <div class="preview-card">
+                    <div class="preview-header">
+                        <span class="label"><i class="fas fa-regular fa-gem"></i> Preview Undangan</span>
+                        <span class="badge">Live</span> <!-- Badge hijau dengan pulsasi -->
+                    </div>
+                    <div class="preview-body">
+                        <!-- ===== PREMIUM SVG ===== -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+                            <defs>
+                                <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#0f2b26" />
+                                    <stop offset="100%" stop-color="#1a4038" />
+                                </linearGradient>
+                                <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#c9a96e" />
+                                    <stop offset="100%" stop-color="#e4d5b6" />
+                                </linearGradient>
+                                <filter id="shadow">
+                                    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15" />
+                                </filter>
+                            </defs>
+                            <rect width="400" height="500" fill="url(#bgGrad)" rx="16" />
+                            <rect x="12" y="12" width="376" height="476" rx="12" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="6 4" />
+                            <circle cx="40" cy="40" r="6" fill="none" stroke="#c9a96e" stroke-width="1.5" />
+                            <circle cx="40" cy="40" r="2" fill="#c9a96e" />
+                            <circle cx="360" cy="40" r="6" fill="none" stroke="#c9a96e" stroke-width="1.5" />
+                            <circle cx="360" cy="40" r="2" fill="#c9a96e" />
+                            <circle cx="40" cy="460" r="6" fill="none" stroke="#c9a96e" stroke-width="1.5" />
+                            <circle cx="40" cy="460" r="2" fill="#c9a96e" />
+                            <circle cx="360" cy="460" r="6" fill="none" stroke="#c9a96e" stroke-width="1.5" />
+                            <circle cx="360" cy="460" r="2" fill="#c9a96e" />
+                            <line x1="80" y1="70" x2="320" y2="70" stroke="#c9a96e" stroke-width="0.8" opacity="0.6" />
+                            <line x1="80" y1="74" x2="320" y2="74" stroke="#c9a96e" stroke-width="0.8" opacity="0.3" />
+                            <text x="200" y="120" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" fill="#e4d5b6" font-weight="700" letter-spacing="2">Walimatul</text>
+                            <text x="200" y="155" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#fff" font-weight="700" letter-spacing="1">Andi &amp; Rina</text>
+                            <line x1="100" y1="180" x2="300" y2="180" stroke="#c9a96e" stroke-width="1.2" />
+                            <circle cx="200" cy="180" r="4" fill="#c9a96e" />
+                            <text x="200" y="220" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#c9a96e" letter-spacing="2">SABTU, 25 OKTOBER 2025</text>
+                            <text x="200" y="245" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#b8c4a2" letter-spacing="1">Aula Grand Purwokerto</text>
+                            <text x="200" y="270" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#b8c4a2" opacity="0.8">Pukul 10.00 WIB - Selesai</text>
+                            <line x1="120" y1="295" x2="280" y2="295" stroke="#c9a96e" stroke-width="0.8" opacity="0.5" />
+                            <rect x="110" y="340" width="180" height="44" rx="22" fill="url(#goldGrad)" filter="url(#shadow)" />
+                            <text x="200" y="368" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#0f2b26" font-weight="600" letter-spacing="1">BUKA UNDANGAN</text>
+                            <text x="200" y="430" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#b8c4a2" opacity="0.6">✨ RSVP &amp; Kirim Ucapan ✨</text>
+                        </svg>
+                    </div>
+                    <div class="preview-footer">
+                        <span><i class="fas fa-calendar-alt"></i> Kapan saja</span>
+                        <span><i class="fas fa-infinity"></i> Selamanya*</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="feature" class="section" style="background:var(--white);">
+        <div class="container">
+            <h2 class="section-title">Layanan <span class="gold">Premium</span> Kami</h2>
+            <p class="section-subtitle">Dari desain hingga pengiriman, semua tersedia untuk menjadikan acara Anda berkesan.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Aktif Selamanya</h4>
+                    <p>Paket dengan masa aktif tanpa batas, undangan tetap online untuk kenangan abadi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h4>Buku Tamu Unlimited</h4>
+                    <p>Kelola kehadiran tamu tanpa batasan, lengkap dengan QR code eksklusif.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4>Blast WhatsApp</h4>
+                    <p>Kirim undangan otomatis ke ratusan tamu dengan pesan personal dan terjadwal.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-palette"></i></div>
+                    <h4>60+ Tema Elegan</h4>
+                    <p>Pilihan tema premium dengan nuansa emas, hijau, dan klasik modern.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-map-pin"></i></div>
+                    <h4>Google Maps</h4>
+                    <p>Integrasi peta langsung memudahkan tamu menemukan lokasi acara Anda.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h4>Love Story</h4>
+                    <p>Ceritakan kisah cinta Anda dengan tata letak romantis dan elegan.</p>
+                </div>
+            </div>
+            <div class="cta-banner">
+                <div class="text">
+                    <h3>Mulai Buat <span class="gold">Undangan Walimatul</span> Sekarang</h3>
+                    <p>Rasakan kemudahan membuat undangan digital mewah untuk hari spesial Anda. Gratis coba dulu!</p>
+                </div>
+                <div class="action">
+                    <a href="/register" class="btn-primary"><i class="fas fa-arrow-right"></i> Coba Gratis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="section" style="background:#fcfbf8;">
+        <div class="container">
+            <h2 class="section-title">Pilih Paket <span class="gold">Sesuai Acara</span></h2>
+            <p class="section-subtitle">Semua paket mendapatkan akses fitur penuh, bedanya masa aktif dan kuota blast.</p>
+            <div class="pricing-tabs" id="pricingTabs">
+                <button class="pricing-tab active" data-target="paket-wedding">Pernikahan</button>
+                <button class="pricing-tab" data-target="paket-save-the-date">Save The Date</button>
+                <button class="pricing-tab" data-target="paket-event-lainnya">Event & Party</button>
+                <button class="pricing-tab" data-target="paket-undangan-3d">Video 3D</button>
+            </div>
+            <div class="pricing-panels">
+                <div class="pricing-panel active" id="paket-wedding">
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Gratis</h3>
+                            <div class="duration">Aktif 2 Hari</div>
+                            <div class="price">Rp 0</div>
+                            <ul>
+                                <li><span class="check">✓</span> Masa aktif 2 hari</li>
+                                <li><span class="check">✓</span> Buku tamu unlimited</li>
+                                <li><span class="check">✓</span> Blast WA 10 tamu</li>
+                                <li><span class="check">✓</span> Akses semua tema</li>
+                                <li><span class="cross">✕</span> <span class="strikethrough">Masa aktif lebih lama</span></li>
+                                <li><span class="cross">✕</span> <span class="strikethrough">Galeri foto</span></li>
+                            </ul>
+                            <a href="/register" class="btn">Coba Gratis</a>
+                        </div>
+                        <div class="pricing-card ring">
+                            <span class="badge-top">Terlaris</span>
+                            <h3>Platinum</h3>
+                            <div class="duration">Aktif 90 Hari</div>
+                            <div class="price"><span class="strike">Rp 300.000</span> Rp 90.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Masa aktif 3 bulan</li>
+                                <li><span class="check">✓</span> Buku tamu unlimited + QR</li>
+                                <li><span class="check">✓</span> Blast WA 200 tamu</li>
+                                <li><span class="check">✓</span> 60+ tema premium</li>
+                                <li><span class="check">✓</span> Galeri 9 foto</li>
+                                <li><span class="check">✓</span> Love story</li>
+                                <li><span class="cross">✕</span> <span class="strikethrough">Aktif selamanya</span></li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                        <div class="pricing-card ring" style="border-color:var(--gold);border-width:2px;">
+                            <span class="badge-top" style="background:var(--green-dark);">Selamanya</span>
+                            <h3>Unlimited</h3>
+                            <div class="duration">Aktif Selamanya</div>
+                            <div class="price"><span class="strike">Rp 500.000</span> Rp 200.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Masa aktif selamanya</li>
+                                <li><span class="check">✓</span> Buku tamu unlimited + QR</li>
+                                <li><span class="check">✓</span> Blast WA 800 tamu</li>
+                                <li><span class="check">✓</span> 60+ tema premium</li>
+                                <li><span class="check">✓</span> Galeri unlimited</li>
+                                <li><span class="check">✓</span> 10 jenis acara</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                        <div class="pricing-card ring" style="border-color:var(--gold);border-width:2px;">
+                            <span class="badge-top" style="background:var(--gold);">Eksklusif</span>
+                            <h3>Custom Domain</h3>
+                            <div class="duration">Aktif 1 Tahun</div>
+                            <div class="price"><span class="strike">Rp 799.000</span> Rp 259.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Semua fitur Unlimited</li>
+                                <li><span class="check">✓</span> Blast WA 800 tamu</li>
+                                <li><span class="check">✓</span> Domain .com / .web.id</li>
+                                <li><span class="check">✓</span> Nama pasangan</li>
+                                <li><span class="check">✓</span> Galeri unlimited</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-panel" id="paket-save-the-date">
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Save The Date</h3>
+                            <div class="duration">Aktif 30 Hari</div>
+                            <div class="price"><span class="strike">Rp 150.000</span> Rp 75.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Undangan digital</li>
+                                <li><span class="check">✓</span> RSVP online</li>
+                                <li><span class="check">✓</span> Link share</li>
+                                <li><span class="check">✓</span> Template pilihan</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-panel" id="paket-event-lainnya">
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Khitanan / Wisuda</h3>
+                            <div class="duration">Aktif 30 Hari</div>
+                            <div class="price"><span class="strike">Rp 200.000</span> Rp 90.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Tema spesial event</li>
+                                <li><span class="check">✓</span> Buku tamu unlimited</li>
+                                <li><span class="check">✓</span> Galeri 4 foto</li>
+                                <li><span class="check">✓</span> Countdown acara</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Birthday / Natal</h3>
+                            <div class="duration">Aktif 30 Hari</div>
+                            <div class="price"><span class="strike">Rp 200.000</span> Rp 90.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Tema meriah</li>
+                                <li><span class="check">✓</span> Buku tamu unlimited</li>
+                                <li><span class="check">✓</span> Galeri 4 foto</li>
+                                <li><span class="check">✓</span> Fitur komentar</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-panel" id="paket-undangan-3d">
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h3>Video 3D Standar</h3>
+                            <div class="duration">Aktif 30 Hari</div>
+                            <div class="price"><span class="strike">Rp 560.000</span> Rp 200.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Video 3D sesuai tema</li>
+                                <li><span class="check">✓</span> Request foto</li>
+                                <li><span class="check">✓</span> Custom musik</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                        <div class="pricing-card ring">
+                            <span class="badge-top">Premium</span>
+                            <h3>Video 3D Premium</h3>
+                            <div class="duration">Aktif 30 Hari</div>
+                            <div class="price"><span class="strike">Rp 800.000</span> Rp 700.000</div>
+                            <ul>
+                                <li><span class="check">✓</span> Animasi premium</li>
+                                <li><span class="check">✓</span> Kualitas tinggi</li>
+                                <li><span class="check">✓</span> Revisi 2x</li>
+                            </ul>
+                            <a href="/register" class="btn gold">Pilih Paket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">walimatul<span>.web.id</span></div>
+                    <p>Platform undangan digital elegan untuk pernikahan, walimah, dan acara sakral. Dibuat dengan penuh cinta dari Indonesia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#feature">Fitur</a></li>
+                        <li><a href="#pricing">Paket</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hubungi Kami</h4>
+                    <ul>
+                        <li><a href="https://wa.me/62895357946429" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/galeri_undangan_purwokerto" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="/privacy-policy">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 walimatul.web.id. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/galeri_undangan_purwokerto" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/62895357946429" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WA ===== -->
+    <a class="wa-float" href="https://wa.me/62895357946429" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', function() {
+                    menu.classList.toggle('open');
+                });
+            }
+
+            const tabs = document.querySelectorAll('.pricing-tab');
+            const panels = document.querySelectorAll('.pricing-panel');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.dataset.target;
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    panels.forEach(p => p.classList.remove('active'));
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+
+            const wa = document.querySelector('.wa-float');
+            if (wa) {
+                let isDown = false,
+                    ox = 0,
+                    oy = 0;
+                const start = (e) => {
+                    isDown = true;
+                    const c = e.touches ? e.touches[0] : e;
+                    const rect = wa.getBoundingClientRect();
+                    ox = c.clientX - rect.left;
+                    oy = c.clientY - rect.top;
+                    wa.style.transition = 'none';
+                    document.body.style.userSelect = 'none';
+                    e.preventDefault && e.preventDefault();
+                };
+                const move = (e) => {
+                    if (!isDown) return;
+                    const c = e.touches ? e.touches[0] : e;
+                    let left = c.clientX - ox,
+                        top = c.clientY - oy;
+                    left = Math.max(0, Math.min(window.innerWidth - wa.offsetWidth, left));
+                    top = Math.max(0, Math.min(window.innerHeight - wa.offsetHeight, top));
+                    wa.style.left = left + 'px';
+                    wa.style.top = top + 'px';
+                    wa.style.right = 'auto';
+                    wa.style.bottom = 'auto';
+                    e.preventDefault && e.preventDefault();
+                };
+                const end = () => { isDown = false;
+                    wa.style.transition = '';
+                    document.body.style.userSelect = ''; };
+                wa.addEventListener('mousedown', start);
+                document.addEventListener('mousemove', move);
+                document.addEventListener('mouseup', end);
+                wa.addEventListener('touchstart', start, { passive: false });
+                document.addEventListener('touchmove', move, { passive: false });
+                document.addEventListener('touchend', end);
+            }
+        })();
+    </script>
+
+</body>
+</html>
